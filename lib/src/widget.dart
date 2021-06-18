@@ -3,7 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'element.dart';
 
 abstract class PureWidget<T> extends Widget {
-  /// In oreder for built-in [shouldRebuild] to work, your widget should define [props]
+  /// In order for built-in [shouldRebuild] to work, your widget should define [props]
   /// ```dart
   /// class MyWidget extends PureWidget<int> {
   ///   final int props;
@@ -21,7 +21,7 @@ abstract class PureWidget<T> extends Widget {
     return PureElement<T>(this);
   }
 
-  /// Override this method of you want your widget rebuilds to be driven by custom logic
+  /// Override this method if you want your widget rebuilds to be driven by custom logic
   /// Default behavior: compares props by reference
   bool shouldRebuild(
     covariant PureWidget oldWidget,
